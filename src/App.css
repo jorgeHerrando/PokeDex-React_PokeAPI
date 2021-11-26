@@ -1,5 +1,7 @@
 /* General */
 .App {
+  display: flex;
+  flex-direction: column;
   padding-top: 56px;
   min-height: 100vh;
   margin: 0;
@@ -9,6 +11,10 @@
   background-position: center center;
   background-size: cover;
 }
+.mainContainer {
+  flex-grow: 1;
+}
+
 a,
 a:hover {
   text-decoration: none;
@@ -34,10 +40,20 @@ a:hover {
 
 /* Dashboard */
 .pokemon-list-container {
-  max-height: 80vh;
+  max-height: 90vh;
   overflow: hidden scroll;
   padding: 1rem 0;
   margin: 0 5rem;
+}
+
+.pokemon-search {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+}
+.pokemon-search:focus {
+  outline: none;
 }
 
 /* Cards */

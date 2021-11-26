@@ -76,7 +76,7 @@ const PokemonDetails = () => {
       // save stats
       let stats = {};
       pokemon.data.stats.map((stat) => {
-        stats[stat.stat.name] = stat.base_stat;
+        return (stats[stat.stat.name] = stat.base_stat);
       });
       //   console.log(stats);
 
@@ -116,7 +116,7 @@ const PokemonDetails = () => {
 
   const nextPage = function (number) {
     setOnhold(true);
-    if (number != 251) {
+    if (number !== 251) {
       setPokeIndex(number + 1);
     } else {
       setPokeIndex(1);
@@ -125,7 +125,7 @@ const PokemonDetails = () => {
   };
   const previousPage = function (number) {
     setOnhold(true);
-    if (number != 1) {
+    if (number !== 1) {
       setPokeIndex(number - 1);
     } else {
       setPokeIndex(251);
@@ -154,7 +154,7 @@ const PokemonDetails = () => {
         </div>
       )}
 
-      {pokeIndex == 251 && (
+      {pokeIndex === 251 && (
         <div className="pokemon-detail-arrows-container">
           <Link
             onClick={() => previousPage(pokeIndex)}
@@ -173,7 +173,7 @@ const PokemonDetails = () => {
         </div>
       )}
 
-      {pokeIndex == 1 && (
+      {pokeIndex === 1 && (
         <div className="pokemon-detail-arrows-container">
           <Link
             onClick={() => previousPage(pokeIndex)}
@@ -214,7 +214,7 @@ const PokemonDetails = () => {
           <div className="pokemon-detail-body">
             <div className="pokemon-data">
               <div className="pokemon-image-container">
-                <img src={imageUrl} className="pokemon-image" />
+                <img src={imageUrl} alt="pokemon" className="pokemon-image" />
               </div>
               <div className="pokemon-maindata">
                 <div className="pokemon-data-left">
@@ -272,7 +272,7 @@ const PokemonDetails = () => {
                       <div className="progress">
                         <div
                           className="progress-bar"
-                          role="progressBar"
+                          role="progressbar"
                           style={{
                             width: `${subject / 1.5}%`,
                           }}

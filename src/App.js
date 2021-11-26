@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 import Navbar from "./components/layout/Navbar";
-import Search from "./components/layout/Search";
 import Dashboard from "./components/Dashboard/Dashboard";
 import PokemonDetails from "./components/pokemon/PokemonDetails";
 import Footer from "./components/layout/Footer";
@@ -15,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Search /> */}
       <div className="mainContainer">
         <Routes>
           <Route exact path="/" element={<Dashboard />} />
