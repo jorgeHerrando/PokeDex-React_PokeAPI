@@ -35,7 +35,9 @@ const PokemonList = () => {
               setSearchInput(e.target.value);
             }}
           />
+          
           {pokemons
+          // eslint-disable-next-line
             .filter((pokemon) => {
               if (searchInput === "") {
                 // console.log(pokemon);

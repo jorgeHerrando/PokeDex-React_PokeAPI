@@ -43,7 +43,7 @@ const PokemonCard = (props) => {
 
   return (
     <React.Fragment>
-      <Col sm={6} md={3} className="card-container">
+      <Col sm={6} lg={3} className="card-container">
         <Link to={`pokemon/${pokemonIndex}`}>
           <Card>
             <Card.Header as="h5">
