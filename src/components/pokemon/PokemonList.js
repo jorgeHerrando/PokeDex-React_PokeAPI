@@ -7,9 +7,9 @@ import PokemonCard from "./PokemonCard";
 
 const PokemonList = () => {
   // seteamos estados
-  const [url, setUrl] = useState(
+  const url = 
     "https://pokeapi.co/api/v2/pokemon/?limit=251"
-  );
+  ;
   const [pokemons, setPokemons] = useState(null);
 
   const [searchInput, setSearchInput] = useState("");
@@ -38,7 +38,7 @@ const PokemonList = () => {
           {pokemons
             .filter((pokemon) => {
               if (searchInput === "") {
-                console.log(pokemon);
+                // console.log(pokemon);
                 return pokemon;
               } else if (
                 pokemon.name.toLowerCase().includes(searchInput.toLowerCase())
